@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Solution File, Format Version 18.00
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "Inhouse_SQL Perf_Tuning_2021_Nov", "Inhouse_SQL Perf_Tuning_2021_Nov\Inhouse_SQL Perf_Tuning_2021_Nov.ssmssqlproj", "{C07F38F8-0731-4CE8-8DC6-FEC5A5A213D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C07F38F8-0731-4CE8-8DC6-FEC5A5A213D1}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6799D286-D723-41CC-B5EC-6913875866D2}
+	EndGlobalSection
+EndGlobal
