@@ -7,6 +7,7 @@
 ## Virtualisierung?
 *             Setup und first Settings SQL Server
 *             First Settings und best practice Database
+*			  DB Design - DB Settings
 *             Scoped Database 
 *             Aktivieren des Query Store 
 *             Arbeiten mit QueryStore (zb. bad Procedures)
