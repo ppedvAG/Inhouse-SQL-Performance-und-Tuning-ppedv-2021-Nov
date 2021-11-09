@@ -16,6 +16,7 @@ part. IX
 ! abdeckender IX = der ideale IX zur Abfrage  covered Index
 
 ColumnStore gr und nicht gr..
+select * from sys.dm_db_column_store_row_group_physical_stats
 
 
 

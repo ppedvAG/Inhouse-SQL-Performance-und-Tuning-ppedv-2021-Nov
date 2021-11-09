@@ -1,6 +1,6 @@
 
 
-ALTER DATABASE NewStyle SET ACCELERATED_DATABASE_RECOVERY = ON;
+ALTER DATABASE NewStyle SET ACCELERATED_DATABASE_RECOVERY = ON; --Version 1.0
 
 use NewStyle;
 
@@ -38,4 +38,4 @@ select * from sys.dm_tran_version_store where database_id = DB_ID()
 select * from sys.dm_tran_version_store_space_usage where database_id = DB_ID()
 select * from sys.dm_db_index_physical_stats(db_id(), object_id('test1'), NULL, NULL, 'detailed')
 
-rollback
+rollback --0

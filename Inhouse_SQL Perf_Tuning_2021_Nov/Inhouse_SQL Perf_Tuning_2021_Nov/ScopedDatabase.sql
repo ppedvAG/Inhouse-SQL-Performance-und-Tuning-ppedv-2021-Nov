@@ -61,6 +61,7 @@ select * from c1 inner join o1
 	o1.employeeid < 3500	
 	order by EmployeeID desc, o1.CustomerID desc
 
+
 select 
 	qs.plan_generation_num,
 	qs.creation_time,
@@ -87,6 +88,16 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 alter database scoped configuration set optimize_for_ad_hoc_workloads=OFF
 ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING = ON;
 GO
+
+--Ist SQL Server CaseSesnitive .. Groß und Kleinschreibung.. hinsichtlich Performance
+
+--dieses Problem läßt sich durch SP 
+select * from orders where OrderID =10 --hash und Parametrisiert Par @1 tinyint
+select * from orders where orderID =10 --andere Abfragen wg o
+select * from orders where OrderID =300 --hash ok, aber kein tinyint.. smallint
+select * from orders     --hash wg linebreak
+		where OrderID =300
+
 
 
 declare @stmt nvarchar(128)= N'SELECT * from dbo.orders where orderid = %i;'
