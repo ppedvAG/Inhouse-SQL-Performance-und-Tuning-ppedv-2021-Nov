@@ -29,7 +29,7 @@ select * from person
 
 CREATE TABLE friendOf AS EDGE;
 select * from friendof
-
+select * from person
 
 INSERT INTO Person VALUES (1,'Stefan');
 INSERT INTO Person VALUES (2,'Daniel');
@@ -183,8 +183,7 @@ alter table person add Distanz int -- Entfernung von best X..so als Idee
 
 update Person set Distanz = id % 3
 update Person set Distanz = 5 where Distanz = 0
-
-
+select * from person
 
 SELECT PersonName, Friends, levels
 FROM (
@@ -199,8 +198,12 @@ FROM (
     WHERE MATCH(SHORTEST_PATH(Person1(-(fo)->Person2){1,3}))
     AND Person1.name = 'Jacob'
 ) Q
-WHERE Q.levels = 1
+WHERE Q.levels < 4
 
+
+select * from northwind..employees
+
+--CTEs
 
 select * from person
 

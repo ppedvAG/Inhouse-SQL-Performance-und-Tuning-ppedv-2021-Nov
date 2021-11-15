@@ -15,5 +15,6 @@ END;
 GO
 
 
+select APP_name(), getdate(), host_name()
 
 

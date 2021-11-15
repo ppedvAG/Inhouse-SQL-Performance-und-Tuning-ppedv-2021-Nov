@@ -79,15 +79,9 @@
     </LogicalFolder>
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
-        <FileNode Name="0008_Locks finden.sql">
+        <FileNode Name="0030_AdaptivMemoryGrant.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
-          <AssociatedConnUserName />
-          <FullPath>0008_Locks finden.sql</FullPath>
-        </FileNode>
-        <FileNode Name="0030_AdaptivMemoryGrant.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>0030_AdaptivMemoryGrant.sql</FullPath>
         </FileNode>
@@ -152,8 +146,8 @@
           <FullPath>OnlineRebuilds.sql</FullPath>
         </FileNode>
         <FileNode Name="Partition.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Partition.sql</FullPath>
         </FileNode>
@@ -318,6 +312,12 @@
           <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>TSQLCuttedData.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Wiederholung Tag3.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Wiederholung Tag3.sql</FullPath>
         </FileNode>
         <FileNode Name="WindowFunction.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:True</AssociatedConnectionMoniker>

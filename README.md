@@ -55,9 +55,11 @@
 
              
 # Tag 4
-*	Window Functions
+*   wait_Stats
+*   Locks
 *	Zeilenversionierung
 *	Partitionierung
+*	Window Functions
 *	Ressource Governor   
 *   Xevents
 
