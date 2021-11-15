@@ -52,6 +52,9 @@ select * from sys.dm_db_index_usage_Stats where database_id=DB_ID()
 select * from sys.indexes
 
 
+select GETDATE()
+
+
 
 select object_name(i.object_id) as TableName
       ,i.type_desc,i.name

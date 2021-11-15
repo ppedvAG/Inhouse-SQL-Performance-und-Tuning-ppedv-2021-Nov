@@ -1,3 +1,8 @@
+
+
+--Nicht immer muss eine exakte Schätzung sein,...
+--kostet weniger...;-)
+
 use StackOverflow2010;
 go
 

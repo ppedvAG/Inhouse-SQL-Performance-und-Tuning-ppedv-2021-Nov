@@ -1,12 +1,11 @@
---statt Startparameter des Servers
+--statt Startparameter des Servers oder Serversettings
+--lassen sich Einstellungen auf DB niveau aktiveren
+
 ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE = OFF
 GO
-
-
-
 ALTER DATABASE SCOPED CONFIGURATION SET LEGACY_CARDINALITY_ESTIMATION = On;
 GO
-
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = OFF;
 
 
 ----------------------------------------
@@ -43,7 +42,7 @@ where
 		o.OrderID < 100000
 		AND
 		c.CustomerID like '%G'
-		option (maxdop 6)
+		option (maxdop 6) --1 4 6 8  beste Preis/Leistungsverhältnis mit 6
 
 
 
@@ -59,7 +58,7 @@ select * from c1 inner join o1
 	c1.CustomerID like  'bl%'
 	and
 	o1.employeeid < 3500	
-	order by EmployeeID desc, o1.CustomerID desc
+	order by EmployeeID desc, o1.CustomerID desc --Nicht jede CPU, die beteiligt ist, hat auch was zu tun...!!
 
 
 select 
@@ -90,6 +89,8 @@ ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING = ON;
 GO
 
 --Ist SQL Server CaseSesnitive .. Groß und Kleinschreibung.. hinsichtlich Performance
+--Ja.. da bei Adhoc Abfragen nur ein identischer Planhashwert wiederverwendet werden kann
+--ist aber nicht der Fall bei  Zeilenumbrüchen, Groß/Kleinschreibung oder durch Parametrisierung versch Datentypen
 
 --dieses Problem läßt sich durch SP 
 select * from orders where OrderID =10 --hash und Parametrisiert Par @1 tinyint
@@ -128,7 +129,7 @@ begin
 end
 GO
 
---´Stets neue Pläne "compiled plan" mit 16k
+--Stets neue Pläne "compiled plan" mit 16k
 select st.text, cp.size_in_bytes, cp.usecounts,cp.cacheobjtype
 from 
 			sys.dm_exec_cached_plans cp
@@ -172,7 +173,7 @@ end
 GO
 
 --´Nujn werden Pläne aus Kopie gezogen... 136bytes
---Compiled Stub plan
+--Compiled Stub plan.. Geringere Aufwand, da sich eine Kopie gezogen wird
 select st.text, cp.size_in_bytes, cp.usecounts,cp.cacheobjtype
 from 
 			sys.dm_exec_cached_plans cp
@@ -208,3 +209,5 @@ where
 ------------------------------------------------
 select name,sd.is_accelerated_database_recovery_on from sys.databases sd
 alter database nwindbig set accelerated_database_recovery = Off 
+
+--siehe ScopeDatabase_ADR...

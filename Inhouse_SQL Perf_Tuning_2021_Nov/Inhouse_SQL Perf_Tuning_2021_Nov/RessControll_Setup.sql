@@ -1,0 +1,37 @@
+--SETUP
+
+
+Create database RessControllDB;
+GO
+
+USE RessControllDB;
+GO
+
+USE [master]
+GO
+CREATE LOGIN [Hans] WITH PASSWORD=N'123', 
+					DEFAULT_DATABASE=[RessControllDB], 
+					CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF
+
+CREATE LOGIN [Susi] WITH PASSWORD=N'123', 
+					DEFAULT_DATABASE=[RessControllDB], 
+					CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF
+
+
+CREATE LOGIN [Peter] WITH PASSWORD=N'123', 
+					DEFAULT_DATABASE=[RessControllDB], 
+					CHECK_EXPIRATION=OFF, CHECK_POLICY=OFF
+
+
+
+USE [RessControllDB]
+GO
+CREATE USER [Hans] FOR LOGIN [Hans]
+CREATE USER [Susi] FOR LOGIN [Susi]
+CREATE USER [Peter] FOR LOGIN [Peter]
+
+ALTER ROLE [db_datareader] ADD MEMBER [Hans]
+ALTER ROLE [db_datareader] ADD MEMBER [Susi]
+ALTER ROLE [db_datareader] ADD MEMBER [Peter]
+
+GO

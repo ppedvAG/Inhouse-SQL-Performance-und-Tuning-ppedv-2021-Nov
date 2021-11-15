@@ -10,7 +10,7 @@ USE AdventureWorks2014
 GO
 
 -- Create a simple Multi-Statement Table Valued Function
-CREATE FUNCTION GetOrdersByCustomer
+CREATE OR ALTER FUNCTION GetOrdersByCustomer
 (
 	@CustomerID INT
 )

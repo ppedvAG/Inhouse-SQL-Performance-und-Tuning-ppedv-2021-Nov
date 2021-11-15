@@ -1,26 +1,74 @@
 <?xml version="1.0"?>
 <SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Inhouse_SQL Perf_Tuning_2021_Nov">
   <Items>
-    <LogicalFolder Name="Verbindungen" Type="2" Sorted="true">
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
       <Items>
-        <ConnectionNode Name="KAIRO:KAIRO\Administrator">
+        <ConnectionNode Name="KAIRO:">
           <Created>2021-11-03T15:55:55.0396942+01:00</Created>
           <Type>SQL</Type>
           <Server>KAIRO</Server>
           <UserName />
-          <Authentication>Windows-Authentifizierung</Authentication>
+          <Authentication>SQL</Authentication>
           <InitialDB>master</InitialDB>
           <LoginTimeout>30</LoginTimeout>
           <ExecutionTimeout>0</ExecutionTimeout>
           <ConnectionProtocol>NotSpecified</ConnectionProtocol>
           <ApplicationName>Microsoft SQL Server Management Studio - Abfrage</ApplicationName>
         </ConnectionNode>
-        <ConnectionNode Name="KAIRO\:KAIRO\Administrator">
+        <ConnectionNode Name="KAIRO:Hans">
+          <Created>2021-11-14T13:20:45.2478501+01:00</Created>
+          <Type>SQL</Type>
+          <Server>KAIRO</Server>
+          <UserName>Hans</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="KAIRO:KAIRO\Administrator">
+          <Created>2021-11-10T15:08:33.4662605+01:00</Created>
+          <Type>SQL</Type>
+          <Server>KAIRO</Server>
+          <UserName />
+          <Authentication>Windows Authentication</Authentication>
+          <InitialDB>Northwind</InitialDB>
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="KAIRO:Peter">
+          <Created>2021-11-14T13:22:42.1466128+01:00</Created>
+          <Type>SQL</Type>
+          <Server>KAIRO</Server>
+          <UserName>Peter</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="KAIRO:Susi">
+          <Created>2021-11-14T13:20:37.6244552+01:00</Created>
+          <Type>SQL</Type>
+          <Server>KAIRO</Server>
+          <UserName>Susi</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="KAIRO\:">
           <Created>2021-11-08T11:24:03.7630803+01:00</Created>
           <Type>SQL</Type>
           <Server>KAIRO\</Server>
           <UserName />
-          <Authentication>Windows-Authentifizierung</Authentication>
+          <Authentication>SQL</Authentication>
           <InitialDB />
           <LoginTimeout>30</LoginTimeout>
           <ExecutionTimeout>0</ExecutionTimeout>
@@ -29,7 +77,7 @@
         </ConnectionNode>
       </Items>
     </LogicalFolder>
-    <LogicalFolder Name="Abfragen" Type="0" Sorted="true">
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
         <FileNode Name="0008_Locks finden.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:True</AssociatedConnectionMoniker>
@@ -61,17 +109,17 @@
           <AssociatedConnUserName />
           <FullPath>02_DB und DB Design.sql</FullPath>
         </FileNode>
+        <FileNode Name="03_Index_Wartung.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>03_Index_Wartung.sql</FullPath>
+        </FileNode>
         <FileNode Name="03_Indizes.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO\:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>KAIRO\</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>03_Indizes.sql</FullPath>
-        </FileNode>
-        <FileNode Name="AdaptiveDefrag.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
-          <FullPath>AdaptiveDefrag.sql</FullPath>
         </FileNode>
         <FileNode Name="GraphDatabase_Shortest.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:True</AssociatedConnectionMoniker>
@@ -103,11 +151,71 @@
           <AssociatedConnUserName />
           <FullPath>OnlineRebuilds.sql</FullPath>
         </FileNode>
+        <FileNode Name="Partition.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Partition.sql</FullPath>
+        </FileNode>
         <FileNode Name="Prozeduren.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Prozeduren.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RessControl_Admin.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>RessControl_Admin.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RessControl_Funktion.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>RessControl_Funktion.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RessControl_Hans.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:False:Hans</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
+          <AssociatedConnUserName>Hans</AssociatedConnUserName>
+          <FullPath>RessControl_Hans.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RessControl_Peter.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:False:Peter</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
+          <AssociatedConnUserName>Peter</AssociatedConnUserName>
+          <FullPath>RessControl_Peter.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RessControl_Pool und Guppen einrichten.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>RessControl_Pool und Guppen einrichten.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RessControl_Sichten.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>RessControl_Sichten.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RessControl_Susi.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:False:Susi</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
+          <AssociatedConnUserName>Susi</AssociatedConnUserName>
+          <FullPath>RessControl_Susi.sql</FullPath>
+        </FileNode>
+        <FileNode Name="RessControll_Setup.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>RessControll_Setup.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Ressource zuweisen.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>Ressource zuweisen.sql</FullPath>
         </FileNode>
         <FileNode Name="ScopedDatabase.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:True</AssociatedConnectionMoniker>
@@ -132,6 +240,18 @@
           <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>ScopedDatabase_ADR_SETUP.sql</FullPath>
+        </FileNode>
+        <FileNode Name="TableVariable.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>TableVariable.sql</FullPath>
+        </FileNode>
+        <FileNode Name="TabVariable.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>TabVariable.sql</FullPath>
         </FileNode>
         <FileNode Name="TemporalTables_1_Aktivieren.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:True</AssociatedConnectionMoniker>
@@ -182,8 +302,8 @@
           <FullPath>TSQL_MemoryGrantFeedback.sql</FullPath>
         </FileNode>
         <FileNode Name="TSQL_TableVariable.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>TSQL_TableVariable.sql</FullPath>
         </FileNode>
@@ -198,6 +318,12 @@
           <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>TSQLCuttedData.sql</FullPath>
+        </FileNode>
+        <FileNode Name="WindowFunction.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>WindowFunction.sql</FullPath>
         </FileNode>
         <FileNode Name="x_DMV_Memory.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:True</AssociatedConnectionMoniker>
@@ -247,15 +373,27 @@
           <AssociatedConnUserName />
           <FullPath>x_Wartenfinden.sql</FullPath>
         </FileNode>
+        <FileNode Name="z_AdaptiveDefrag.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>z_AdaptiveDefrag.sql</FullPath>
+        </FileNode>
         <FileNode Name="z_instnwnd.sql">
           <AssociatedConnectionMoniker />
           <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>z_instnwnd.sql</FullPath>
         </FileNode>
+        <FileNode Name="Z_Wiederholung_Tag2.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO\:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KAIRO\</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Z_Wiederholung_Tag2.sql</FullPath>
+        </FileNode>
       </Items>
     </LogicalFolder>
-    <LogicalFolder Name="Sonstiges" Type="3" Sorted="true">
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
       <Items />
     </LogicalFolder>
   </Items>

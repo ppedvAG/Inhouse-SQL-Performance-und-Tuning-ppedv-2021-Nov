@@ -1,3 +1,9 @@
+--Gerade bei Einsatz von Variablen wird der zugewiesene Arbeitsspeicher falsch (zu niedrig) eingeschätzt
+--evtl nur 1 MB , obwohl Daten noch im Speicher (order by) sortiert werden müssen.
+
+--SQL Server kannnun darauf reagieren.. beim 2ten und 3 Anlauf ;-)
+
+
 
 SET STATISTICS IO, TIME ON
 GO

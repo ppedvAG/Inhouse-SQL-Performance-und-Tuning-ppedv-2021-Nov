@@ -1,5 +1,5 @@
 
-alter database northwind set compatibility_level=150
+alter database northwind set compatibility_level=150 --120
 
 
 set statistics io, time on

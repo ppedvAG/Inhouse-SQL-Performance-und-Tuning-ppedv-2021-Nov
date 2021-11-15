@@ -30,20 +30,19 @@ End
 --... begrenzt machbar
 set statistics io, time on
 
-drop table if exists o2
 
-select * into o2 from NwindBig..orders
-
-update o2 
+update ku2 
 	set freight = 
 		freight * RAND(convert(varbinary, newid()))*100
+
+
 
 
 --select freight, count(*) from o2 group by freight
 ALTER DATABASE [Northwind] SET COMPATIBILITY_LEVEL = 110
 GO
-set statistics io, time on
-select * from o2 
+set statistics io, time on --wieviele Zeilen werden geschätzt ;-) ----   €0Prozent
+select * from ku2
 		where 
 			dbo.fbrutto(freight,1.19) < 2
 --, CPU-Zeit = 5800 ms, verstrichene Zeit = 6500 ms.
@@ -53,7 +52,7 @@ select * from o2
 ALTER DATABASE [Northwind] SET COMPATIBILITY_LEVEL = 150
 GO
 
-select * from o2 
+select * from ku2
 		where 
 			dbo.fbrutto(freight,1.19) < 2
 --870   215

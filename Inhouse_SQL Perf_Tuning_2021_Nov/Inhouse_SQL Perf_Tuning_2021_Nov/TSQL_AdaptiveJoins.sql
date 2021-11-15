@@ -1,4 +1,8 @@
 --Adaptive Joins :
+--Ein Plan wird gerne wiederverwendet. Was aber, wenn der Plan etwas falsch liegt und
+--ein anderer JOIN Operator besser geeignet wäre zB MERGE - HASH _LOOP Join
+
+
 USE [master]
 USE [master]
 RESTORE DATABASE [AdventureWorks2014] 
@@ -27,6 +31,7 @@ SET STATISTICS IO, TIME ON
 GO
 
 -- Create a dummy ColumnStore Index to "fool" the Query Optimizer
+--kein DS im Columnstore  !!!
 CREATE NONCLUSTERED COLUMNSTORE INDEX
 	dummy ON 
 	Sales.SalesOrderHeader(SalesOrderID)
@@ -35,7 +40,7 @@ GO
 
 	-- Run a simple query with an Adaptive Join in the Execution Plan
 set statistics time , io on
-DECLARE @TerritoryID INT = 8
+DECLARE @TerritoryID INT = 1 --0
 
 SELECT SUM(soh.SubTotal) 
 	FROM		Sales.SalesOrderHeader soh

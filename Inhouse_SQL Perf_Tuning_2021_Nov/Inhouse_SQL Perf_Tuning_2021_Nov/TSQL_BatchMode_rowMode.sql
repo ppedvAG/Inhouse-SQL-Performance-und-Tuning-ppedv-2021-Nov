@@ -11,23 +11,24 @@ ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = OFF;
 
 use AdventureWorksDW2016_EXT
 go
-alter database AdventureWorksDW2016_EXT set compatibility_level = 120;
+--alter database AdventureWorksDW2016_EXT set compatibility_level = 120;
 go
 
 select salesorderlinenumber,sum(TotalProductCost) 
 from dbo.FactResellerSalesXL_PageCompressed
 group by salesorderlinenumber
---17252  2888
+--6500  1000
 ----Row Mode.. KompLevele: 140
 
-
 alter database AdventureWorksDW2016_EXT set compatibility_level = 150;
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ON_ROWSTORE = ON;
+
 go
 
 select salesorderlinenumber,sum(TotalProductCost) 
 from dbo.FactResellerSalesXL_PageCompressed
 group by salesorderlinenumber
---6000 898
+--3500 700
 
 
 
