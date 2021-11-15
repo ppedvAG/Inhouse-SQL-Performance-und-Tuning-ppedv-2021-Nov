@@ -50,6 +50,8 @@ GO
 -- SQL Server estimates for the sort operator 1 record, which also reflects the actual number of rows.
 -- SQL Server requests a memory grant of 1.204kb - the sorting is done inside the memory.
 -- Logical reads: 4
+
+set statistics io, time on
 DECLARE @x INT
 
 SELECT @x = column2 FROM Table1

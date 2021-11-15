@@ -28,7 +28,7 @@
 *               Profiler (best practice)
 *              Perfmon (Welche Werte sollte man aufzeichnen, Grenzwerte)
 
-## Statstistiken
+## Statistiken
 *             Stop der Aufzeichnungen
 *             Analyse der Aufzeichnung
 
@@ -47,20 +47,19 @@
 *             Weitere Tools für das Monitoring
 *             Wichtige DMVs 
 *             Datensammler
-*             Xevents
 *             Manuelle Jobs
 *             Aktivitätsmonitor
 *             Pläne analysieren
 *             Neue TSQL Features SQL 2019  
-*             ADR
+*			  In Memory Tabellen
 
              
 # Tag 4
 *	Window Functions
 *	Zeilenversionierung
 *	Partitionierung
-*	In Memory Tabellen
 *	Ressource Governor   
+*   Xevents
 
 
  

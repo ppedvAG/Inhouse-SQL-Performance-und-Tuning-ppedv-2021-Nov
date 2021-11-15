@@ -26,6 +26,9 @@ update contacts set email = 'asas@earth.de' where cid = 1
 update contacts set Phone = 'w34sasaa34' where cid = 2 
 update contacts set Lastname = 'Smith' where cid = 1 
 
+
+select * from #zeit --2021-11-15 14:38:52.120
+
 --Result
 select * from contacts 
 
@@ -44,15 +47,15 @@ select * ,
 
 --nach Version suchen
 '2021-03-19 14:19:23.6939704'
-select * from contactshistory 
+select * from contactshistory --2021-11-15 14:38:52.120
 where 
-    Startdatum >= '19.3.2021 14:19:20'  
+    Startdatum >= '15.11.2021 13:38:33.100'  
     and 
-    Enddatum <= '19.3.2021 14:20:50'
+    Enddatum <= '15.11.2021 13:38:53.100' 
 
 --Noch besser
 select * from contacts 
-    FOR SYSTEM_TIME AS OF '19.3.2021 14:20:50'
+    FOR SYSTEM_TIME AS OF '15.11.2021 13:38:53.100' 
     where cid =1 
 
 --Neue Spalten
@@ -60,7 +63,7 @@ Alter Table contacts
 	add spx int
 
 
-update contacts set Firstname= 'Chris', spx=2 where cid = 1
+update contacts set Firstname= 'Chris', spx=3 where cid = 1
 
 	--nope
 delete from Contactshistory where StartDatum <= '2016-08-05 12:45:43.2711351'

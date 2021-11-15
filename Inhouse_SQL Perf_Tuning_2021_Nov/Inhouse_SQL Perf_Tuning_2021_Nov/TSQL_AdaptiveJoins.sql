@@ -40,7 +40,7 @@ GO
 
 	-- Run a simple query with an Adaptive Join in the Execution Plan
 set statistics time , io on
-DECLARE @TerritoryID INT = 1 --0
+DECLARE @TerritoryID INT = 1--statt 1 zb
 
 SELECT SUM(soh.SubTotal) 
 	FROM		Sales.SalesOrderHeader soh
