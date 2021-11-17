@@ -79,12 +79,6 @@
     </LogicalFolder>
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
-        <FileNode Name="0030_AdaptivMemoryGrant.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
-          <AssociatedConnUserName />
-          <FullPath>0030_AdaptivMemoryGrant.sql</FullPath>
-        </FileNode>
         <FileNode Name="01_Setup.sql">
           <AssociatedConnectionMoniker />
           <AssociatedConnSrvName />
@@ -110,8 +104,8 @@
           <FullPath>03_Index_Wartung.sql</FullPath>
         </FileNode>
         <FileNode Name="03_Indizes.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO\:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>KAIRO\</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>03_Indizes.sql</FullPath>
         </FileNode>
@@ -121,15 +115,9 @@
           <AssociatedConnUserName />
           <FullPath>GraphDatabase_Shortest.sql</FullPath>
         </FileNode>
-        <FileNode Name="GraphDatabases.sql">
+        <FileNode Name="Graphdemo.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
-          <AssociatedConnUserName />
-          <FullPath>GraphDatabases.sql</FullPath>
-        </FileNode>
-        <FileNode Name="Graphdemo.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>Graphdemo.sql</FullPath>
         </FileNode>
@@ -138,6 +126,12 @@
           <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Locks per Xevents.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Monitoring.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>Monitoring.sql</FullPath>
         </FileNode>
         <FileNode Name="OnlineRebuilds.sql">
           <AssociatedConnectionMoniker />
@@ -164,8 +158,8 @@
           <FullPath>RessControl_Admin.sql</FullPath>
         </FileNode>
         <FileNode Name="RessControl_Funktion.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>RessControl_Funktion.sql</FullPath>
         </FileNode>
@@ -182,8 +176,8 @@
           <FullPath>RessControl_Peter.sql</FullPath>
         </FileNode>
         <FileNode Name="RessControl_Pool und Guppen einrichten.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>RessControl_Pool und Guppen einrichten.sql</FullPath>
         </FileNode>
@@ -234,6 +228,12 @@
           <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>ScopedDatabase_ADR_SETUP.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery1.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:KAIRO:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>KAIRO</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery1.sql</FullPath>
         </FileNode>
         <FileNode Name="TableVariable.sql">
           <AssociatedConnectionMoniker />

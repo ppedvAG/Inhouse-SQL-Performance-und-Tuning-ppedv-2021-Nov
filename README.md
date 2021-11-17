@@ -50,8 +50,10 @@
 *             Manuelle Jobs
 *             Aktivitätsmonitor
 *             Pläne analysieren
-*             Neue TSQL Features SQL 2019  
-*			  In Memory Tabellen
+*             Neue TSQL Features SQL 2019  -- NON CL ColumnStore IX ohne Daten (Batchmode Adaptive)
+*			  In Memory Tabellen -- schnell beim Schreiben, noch schneller durch Native Komp Proz Stagingtabellen
+*		      Ressource Governor 
+
 
              
 # Tag 4
@@ -60,7 +62,7 @@
 *	Zeilenversionierung
 *	Partitionierung
 *	Window Functions
-*	Ressource Governor   
+*   Data Collector 
 *   Xevents
 
 

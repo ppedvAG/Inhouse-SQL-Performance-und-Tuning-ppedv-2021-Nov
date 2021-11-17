@@ -29,14 +29,14 @@ exklusive Sperre setzen zu können
 Absichtliche Sperre
 
 
-ISOLATIONSSTUFEN: 
+ISOLATIONSSTUFEN: gelten pro Ceonnection
 READ COMMITTED
 READ UNCOMMITTED
 REPEATABLE READ
 SERIALIZABLE
 SNAPSHOT ISOLATION - READ COMMITTED
 
-Sperrnivea Seitens Dev
+Sperrnivea seitens Dev..gelten pro Statement
  update table with (rowlock) --..tablock PAGLOCK, NOLOCK
  set ...
 
@@ -46,7 +46,7 @@ Sperrnivea Seitens Dev
 
 
 --Blockierte Prozesse
-select * from sysprocesses where blocked <>0 --Aktivitätsmonitor
+select * from sysprocesses where blocked <>0 --Aktivitätsmonitor  231  232
 
 
 
@@ -58,7 +58,7 @@ inner join sys.dm_tran_locks tl on
 	er.session_id=tl.request_session_id
 WHERE blocking_session_id <> 0
 GO
-
+--59  232
 
 --Der blockierte: SQL Text
 select text,* from sysprocesses pr 
@@ -68,12 +68,12 @@ where blocked <>0
 --der blockierende
 select text,* from sysprocesses pr 
 cross apply sys.dm_exec_sql_text(pr.sql_handle)
- where spid = 55
+ where spid = 232
 
 --Sperren
 --wer braucht die Sperre
 --und welche Sperre möchte er haben
-select * from sys.dm_tran_locks where request_session_id = 55 --GRANT
+select * from sys.dm_tran_locks where request_session_id = 231 --GRANT
 --KEY Sperre.. was macht der wartende damit
 select * from sys.dm_tran_locks where request_session_id = 72 --WAIT
 
